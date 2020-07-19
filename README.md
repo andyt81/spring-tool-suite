@@ -2,11 +2,6 @@
 
 Container running spring-tool-suite 4 based on maven:3.6.3-openjdk-8
 
-Also includes
-* Sonar Lint
-* EclEmma
-* DevStyle Theme
-
 ## Getting Started
 
 The container is passed environment variables container you username, UID and GID. Files created with the container will then match your local file system when you mount the workspace volume.
