@@ -1,0 +1,17 @@
+version: '3.3'
+ 
+services:
+    sts:
+        image: andyt81/spring-tool-suite:latest
+        container_name: "spring-tool-suite"
+        volumes:
+            - /tmp/.X11-unix:/tmp/.X11-unix
+            - ~/.Xauthority:/develop/.Xauthority:ro
+            - /home/${USER}/docker/sts/workspace:/opt/workspace
+        environment:
+            USER: ${USER}
+            UID: ${UID}
+            GID: ${UID} # Hopefully it's the same!
+            DISPLAY: ${DISPLAY}
+        network_mode: host
+            
